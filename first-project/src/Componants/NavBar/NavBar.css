@@ -1,0 +1,124 @@
+.Navbar {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+.Navbar .Logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Navbar .Logo p {
+    margin-left: 10px;
+    color: #938c8c;
+}
+.Links ul {
+    display: flex;
+    align-items: center;
+}
+.Links ul li {
+    list-style: none;
+    margin: 0 10px;
+    position: relative;
+}
+.Links ul li a {
+    text-decoration: none;
+    color: #938c8c;
+}
+.Links ul li a:hover {
+    color: #f90;
+}
+.nav-Links li::before,.nav-Links li.Active::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: #f90;
+    transition: all 0.5s;
+}
+.nav-Links li:hover:before, .nav-Links li.Active::before {
+    width: 100%;
+}
+.navbar-toggle {
+    display: none;
+    z-index: 3;
+}
+
+@media (max-width: 1107px) {
+    .Links {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .Navbar {
+        justify-content: center;
+    }
+}
+@media (max-width: 780px) {
+    .nav-Links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        width: 200px;
+        height: max-content;
+        padding: 20px;
+        background-color: #ffffff91;
+        box-shadow: 0 5px 15px #0000000d;
+        transform: translate(120%);
+        transition: all 0.5s;
+    }
+    .nav-Links li:hover:before,.nav-Links li.Active::before {
+        width: 20%;
+    }
+    .nav-Links li::before {
+        height: 2px;
+    }
+    .nav-Links.open {
+        transform: translate(0);
+    }
+    .nav-Links li {
+        width: 100%;
+        font-size: 18px;
+        padding: 10px 0;
+    }
+    .navbar-toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .navbar-toggle .bars {
+        position: relative;
+        width: 25px;
+        height: 2px;
+        margin: 2px 20px;
+        background-color: black;
+    }
+}
+@media (max-width: 412px) {
+    .navbar-toggle {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 347px) {
+    .Logo p {
+        margin-top: 5px;
+        margin-left: 0 !important;
+    }
+}

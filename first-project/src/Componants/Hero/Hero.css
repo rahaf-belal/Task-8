@@ -1,0 +1,99 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    margin-top: 68px;
+    position: relative;
+}
+.hero-content {
+    max-width: 600px;
+    padding: 20px 0 0 20px;
+}
+.hero-content h2 {
+    color: #f90;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.hero-content p {
+    font-size: 20px;
+}
+.hero-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.hero-image, .footer-img {
+    width: 100%;
+}
+.hero-image .game {
+    position: absolute;
+    bottom: 55px;
+    right: 14px;
+    width: 23vw;
+}
+.hero-image .pressStart {
+    position: absolute;
+    top: -167px;
+    right: 148px;
+}
+.hero-image .pattren {
+    position: absolute;
+    top: -480px;
+    right: 0;
+    z-index: -1;
+}
+.hero-image::before {
+    content: "START";
+    z-index: 5;
+    top: -100px;
+    right: 380px;
+    font-size: 27px;
+    position: absolute;
+    background-color: #fff;
+    color: #f90;
+    cursor: pointer;
+}
+.hero-links {
+    width: 100%;
+    padding-left: 20px;
+    position: absolute;
+    bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.hero-links .icons a {
+    margin: 0 5px;
+}
+.hero-links p {
+    margin-right: 20px;
+    color: #fff;
+}
+@media (max-width: 780px) {
+    .hero-image .pressStart {
+        top: -180px;
+        right: 108px;
+    }
+    .hero-image::before {
+        top: -110px;
+        right: 344px;
+    }
+}
+@media (max-width: 660px) {
+    .hero-links {
+        bottom: 10px;
+    }
+    .hero-content h2 {
+        font-size: 20px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 577px) {
+    .hero-links .icons a {
+        margin: 1px;
+    }
+    .hero-links p {
+        margin-right: 5px;
+    }
+}
